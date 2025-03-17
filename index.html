@@ -5,32 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diksha Aswal - Data Scientist</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('assets/Background_Image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #2D1B69; /* Dark purple text */
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7); /* 50% transparent overlay */
+            z-index: -1;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
-    <div class="container mx-auto p-10 text-center">
+<body>
+    <!-- Header Navigation -->
+    <nav class="bg-white bg-opacity-80 shadow-md fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-purple-800">Diksha Aswal</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-purple-800 hover:text-purple-600">About</a></li>
+                <li><a href="#skills" class="text-purple-800 hover:text-purple-600">Skills</a></li>
+                <li><a href="#projects" class="text-purple-800 hover:text-purple-600">Projects</a></li>
+                <li><a href="#experience" class="text-purple-800 hover:text-purple-600">Experience</a></li>
+                <li><a href="#publications" class="text-purple-800 hover:text-purple-600">Publications</a></li>
+                <li><a href="#contact" class="text-purple-800 hover:text-purple-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-10 text-center mt-20" id="about">
         <!-- Hero Section -->
         <h1 class="text-5xl font-bold">👩‍💻 Diksha Aswal</h1>
         <p class="text-xl mt-2">Data Scientist | Machine Learning | NLP</p>
         <div class="mt-4">
-            <a href="https://www.linkedin.com/in/diksha-aswal-04aa82a2/" class="text-blue-400 mx-2">LinkedIn</a>
-            <a href="https://github.com/dikshaaswal" class="text-blue-400 mx-2">GitHub</a>
+            <a href="https://www.linkedin.com/in/diksha-aswal-04aa82a2/" class="text-blue-700 mx-2">LinkedIn</a>
+            <a href="https://github.com/dikshaaswal" class="text-blue-700 mx-2">GitHub</a>
         </div>
     </div>
 
+    <!-- Summary Section -->
+    <div class="container mx-auto p-10 text-center">
+        <h2 class="text-3xl font-semibold">📌 About Me</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg">
+            I am an experienced Data Scientist with a strong foundation in machine learning, deep learning, and data analytics. 
+            With a Master’s degree in Computer Science from SUNY Binghamton (graduating in April 2025) and an M.Tech in 
+            Machine Learning from IIIT Allahabad, I have cultivated a passion for solving complex problems through innovative 
+            data-driven solutions.
+        </p>
+    </div>
+
     <!-- Skills Section -->
-    <div class="container mx-auto p-10">
+    <div class="container mx-auto p-10" id="skills">
         <h2 class="text-3xl font-semibold text-center">💡 Skills</h2>
         <div class="flex flex-wrap justify-center mt-4">
-            <span class="bg-gray-700 px-4 py-2 m-2 rounded-lg">Python</span>
-            <span class="bg-gray-700 px-4 py-2 m-2 rounded-lg">SQL</span>
-            <span class="bg-gray-700 px-4 py-2 m-2 rounded-lg">Machine Learning</span>
-            <span class="bg-gray-700 px-4 py-2 m-2 rounded-lg">Deep Learning</span>
-            <span class="bg-gray-700 px-4 py-2 m-2 rounded-lg">NLP</span>
+            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg">Python</span>
+            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg">SQL</span>
+            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg">Machine Learning</span>
+            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg">Deep Learning</span>
+            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg">NLP</span>
         </div>
     </div>
 
     <!-- Projects Section -->
-    <div class="container mx-auto p-10">
+    <div class="container mx-auto p-10" id="projects">
         <h2 class="text-3xl font-semibold text-center">🚀 Projects</h2>
         <div class="mt-4 text-center">
             <p class="mt-2">🔹 <b>Mitigation Tagging</b> - NLP model for ticket classification (Amazon Robotics)</p>
@@ -39,7 +83,7 @@
     </div>
 
     <!-- Experience Section -->
-    <div class="container mx-auto p-10">
+    <div class="container mx-auto p-10" id="experience">
         <h2 class="text-3xl font-semibold text-center">💼 Experience</h2>
         <div class="mt-4 text-center">
             <p class="mt-2">📌 <b>Data Science Intern</b> - Amazon (08/2024 - Present)</p>
@@ -48,15 +92,15 @@
     </div>
 
     <!-- Publications Section -->
-    <div class="container mx-auto p-10">
+    <div class="container mx-auto p-10" id="publications">
         <h2 class="text-3xl font-semibold text-center">📜 Publications</h2>
         <div class="mt-4 text-center">
-            <a href="https://doi.org/10.1007/s00138-021-01206-5" class="text-blue-400">🔹 Absolute IoU for Bounding Box Regression (Springer)</a>
+            <a href="https://doi.org/10.1007/s00138-021-01206-5" class="text-blue-700">🔹 Absolute IoU for Bounding Box Regression (Springer)</a>
         </div>
     </div>
 
     <!-- Contact Section -->
-    <div class="container mx-auto p-10 text-center">
+    <div class="container mx-auto p-10 text-center" id="contact">
         <h2 class="text-3xl font-semibold">📬 Contact</h2>
         <p class="mt-2">📧 Email: diksha.aswal94@gmail.com</p>
     </div>
