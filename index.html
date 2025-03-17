@@ -34,15 +34,22 @@
             background: rgba(255, 255, 255, 0.7);
             z-index: -1;
         }
-      
+
+        /* Section Styling */
+        .section-container {
+            background-color: rgba(180, 150, 200, 0.6); /* Darker lavender */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem; /* Adds spacing between sections */
+        }
     </style>
 </head>
 <body>
 
     <!-- 🔹 Navigation Bar -->
-    <nav class="bg-white bg-opacity-80 shadow-md fixed w-full top-0 z-10">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold text-purple-800">Diksha Aswal</h1>
+    <nav id="navbar" class="bg-white bg-opacity-80 shadow-md fixed w-full top-0 z-10 opacity-0">
+        <div class="container mx-auto flex justify-center p-4">
             <ul class="flex space-x-6">
                 <li><a href="#about" class="text-purple-800 hover:text-purple-600">About</a></li>
                 <li><a href="#skills" class="text-purple-800 hover:text-purple-600">Skills</a></li>
@@ -55,68 +62,89 @@
     </nav>
 
     <!-- 🔹 Hero Section -->
-    <div class="container mx-auto p-10 text-center mt-20" id="about">
-        <h1 id="hero-title" class="text-5xl font-bold">👩‍💻 Diksha Aswal</h1>
-        <p class="text-xl mt-2">Data Scientist | Machine Learning | NLP</p>
-        <div class="mt-4">
-            <a href="https://www.linkedin.com/in/diksha-aswal-04aa82a2/" class="text-blue-700 mx-2">LinkedIn</a>
-            <a href="https://github.com/dikshaaswal" class="text-blue-700 mx-2">GitHub</a>
+    <div class="container mx-auto p-10 mt-20 flex flex-col md:flex-row items-center">
+        <!-- Profile Photo -->
+        <div id="profile-photo" class="w-full md:w-1/3 flex justify-center md:justify-start">
+            <img src="assets/Profile.jpg" alt="Diksha Aswal" class="rounded-full w-65 h-65 shadow-lg">
+        </div>
+
+        <!-- Profile Info -->
+        <div id="profile-info" class="w-full md:w-2/3 text-left pl-10">
+            <h1 class="text-5xl font-bold">👩‍💻 Diksha Aswal</h1>
+            <p class="text-xl mt-2">Data Scientist | Machine Learning | NLP</p>
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/diksha-aswal-04aa82a2/" class="text-blue-700 mx-2">LinkedIn</a>
+                <a href="https://github.com/dikshaaswal" class="text-blue-700 mx-2">GitHub</a>
+            </div>
         </div>
     </div>
 
     <!-- 🔹 About Section -->
-    <div class="container mx-auto p-10 text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold">📌 About Me</h2>
+    <div class="container mx-auto p-10 text-center section-container" id="about" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold">About Me</h2>
         <p class="mt-4 max-w-3xl mx-auto text-lg">
             I am an experienced Data Scientist with a strong foundation in machine learning, deep learning, and data analytics. 
             With a Master’s degree in Computer Science from SUNY Binghamton (graduating in April 2025) and an M.Tech in 
             Machine Learning from IIIT Allahabad, I have cultivated a passion for solving complex problems through innovative 
-            data-driven solutions.
+            data-driven solutions. I thrive at the intersection of data science and real-world applications, using cutting-edge methods to uncover insights and create impactful solutions.
+        </p>
+        <p class="mt-4 max-w-3xl mx-auto text-lg"> Let’s connect if you share interests in data science, machine learning, or the transformative potential of AI!
         </p>
     </div>
 
     <!-- 🔹 Skills Section -->
-    <div class="container mx-auto p-10" id="skills" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-center">💡 Skills</h2>
+    <div class="container mx-auto p-10 section-container" id="skills" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-center">Skills</h2>
         <div class="flex flex-wrap justify-center mt-4">
             <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">Python</span>
             <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">SQL</span>
             <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">Machine Learning</span>
-            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">Deep Learning</span>
-            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">NLP</span>
         </div>
     </div>
 
     <!-- 🔹 Projects Section -->
-    <div class="container mx-auto p-10" id="projects" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-center">🚀 Projects</h2>
+    <div class="container mx-auto p-10 section-container" id="projects" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-center">Projects</h2>
         <p class="mt-4 text-center">🔹 <b>Mitigation Tagging</b> - NLP model for ticket classification (Amazon Robotics)</p>
         <p class="mt-2 text-center">🔹 <b>Fraud Detection</b> - ML-based fraud detection algorithm (Moonfrog Labs)</p>
     </div>
 
     <!-- 🔹 Experience Section -->
-    <div class="container mx-auto p-10" id="experience" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-center">💼 Experience</h2>
+    <div class="container mx-auto p-10 section-container" id="experience" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-center">Experience</h2>
         <p class="mt-4 text-center">📌 <b>Data Science Intern</b> - Amazon (08/2024 - Present)</p>
         <p class="mt-2 text-center">📌 <b>Senior Data Scientist</b> - Moonfrog Labs (09/2020 - 04/2023)</p>
     </div>
-
+    <!-- 🔹 Publications Section -->
+    <div class="container mx-auto p-10 section-container" id="publications" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-center">📜 Publications</h2>
+        <p class="mt-4 text-center">
+            <a href="https://doi.org/10.1007/s00138-021-01206-5" class="text-blue-700">🔹 Absolute IoU for Bounding Box Regression (Springer)</a>
+        </p>
+    </div>
     <!-- 🔹 Contact Section -->
     <div class="container mx-auto p-10 text-center" id="contact" data-aos="fade-up">
         <h2 class="text-3xl font-semibold">📬 Contact</h2>
         <p class="mt-2">📧 Email: diksha.aswal94@gmail.com</p>
     </div>
 
-    <!-- Scripts for Animations -->
+      <!-- Scripts for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // Initialize AOS animations
         AOS.init();
 
-        // Hero Title Animation
-        gsap.from("#hero-title", { 
+        // Hero Section Animation
+        gsap.from("#profile-photo", { 
             opacity: 0, 
-            y: -50, 
+            x: -100, 
+            duration: 1, 
+            ease: "power2.out" 
+        });
+
+        gsap.from("#profile-info", { 
+            opacity: 0, 
+            x: 100, 
             duration: 1, 
             ease: "power2.out" 
         });
@@ -132,18 +160,24 @@
             });
         });
 
-// Prevent browser from restoring scroll position on refresh
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
+        // Navigation Bar Fade-In Animation
+        gsap.to("#navbar", { 
+            opacity: 1, 
+            duration: 1.5, 
+            ease: "power2.out" 
+        });
 
-// Force scroll to top on refresh
-window.onload = function () {
-    setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "instant" });
-    }, 50);
-};
+        // Prevent browser from restoring scroll position on refresh
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
 
+        // Force scroll to top on refresh
+        window.onload = function () {
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: "instant" });
+            }, 50);
+        };
     </script>
 
 </body>
