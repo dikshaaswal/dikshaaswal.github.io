@@ -92,15 +92,71 @@
         </p>
     </div>
 
-    <!-- 🔹 Skills Section -->
-    <div class="container mx-auto p-10 section-container" id="skills" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-center">Skills</h2>
-        <div class="flex flex-wrap justify-center mt-4">
-            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">Python</span>
-            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">SQL</span>
-            <span class="bg-gray-300 px-4 py-2 m-2 rounded-lg transform transition duration-300 hover:scale-110 hover:bg-purple-300">Machine Learning</span>
-        </div>
+
+
+
+<!-- 🔹 Skills Section -->
+<div class="container mx-auto p-10 section-container" id="skills" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-center mb-8">💡 Skills</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    
+    <!-- 🧠 Data Science -->
+    <div 
+      class="border border-purple-700 rounded-lg p-6 shadow-md bg-white bg-opacity-40"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    >
+      <h3 class="text-xl font-semibold mb-4 text-purple-900">🧠 Data Science & AI</h3>
+      <ul class="list-disc list-inside text-left space-y-1">
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+        <li>NLP</li>
+        <li>A/B Testing</li>
+        <li>Statistical Modeling</li>
+        <li>Computer Vision</li>
+      </ul>
     </div>
+
+    <!-- 🛠️ Languages and Tools -->
+    <div 
+      class="border border-purple-700 rounded-lg p-6 shadow-md bg-white bg-opacity-40"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <h3 class="text-xl font-semibold mb-4 text-purple-900">🛠️ Languages & Tools</h3>
+      <ul class="list-disc list-inside text-left space-y-1">
+        <li>Python, SQL, C++, R</li>
+        <li>Git, Docker</li>
+        <li>Jupyter, VS Code</li>
+        <li>Tableau, Looker, Excel</li>
+        <li>Scikit-learn, TensorFlow, PyTorch</li>
+      </ul>
+    </div>
+
+    <!-- ☁️ Cloud & Infrastructure -->
+    <div 
+      class="border border-purple-700 rounded-lg p-6 shadow-md bg-white bg-opacity-40"
+      data-aos="fade-up"
+      data-aos-delay="400"
+    >
+      <h3 class="text-xl font-semibold mb-4 text-purple-900">☁️ Cloud & Infrastructure</h3>
+      <ul class="list-disc list-inside text-left space-y-1">
+        <li>AWS (S3, Lambda, SageMaker, CDK)</li>
+        <li>Redshift, Glue, OpenSearch</li>
+        <li>MongoDB</li>
+        <li>IAM, API Gateway</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
 
     <!-- 🔹 Projects Section -->
     <div class="container mx-auto p-10 section-container" id="projects" data-aos="fade-up">
@@ -109,12 +165,61 @@
         <p class="mt-2 text-center">🔹 <b>Fraud Detection</b> - ML-based fraud detection algorithm (Moonfrog Labs)</p>
     </div>
 
-    <!-- 🔹 Experience Section -->
-    <div class="container mx-auto p-10 section-container" id="experience" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-center">Experience</h2>
-        <p class="mt-4 text-center">📌 <b>Data Science Intern</b> - Amazon (08/2024 - Present)</p>
-        <p class="mt-2 text-center">📌 <b>Senior Data Scientist</b> - Moonfrog Labs (09/2020 - 04/2023)</p>
+
+
+
+<!-- 🔹 Work Experience Section -->
+<div class="container mx-auto p-10 section-container" id="experience" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold text-center mb-8">💼 Work Experience</h2>
+
+    <!-- Amazon Experience -->
+    <div class="flex flex-col md:flex-row items-start mb-10" data-aos="fade-up">
+        <!-- Left: Company Logo -->
+        <div class="w-1/3 md:w-1/5 flex justify-center md:justify-start">
+            <img src="assets/Amazon.png" alt="Amazon" class="w-50 h-50 rounded-lg shadow-md">
+        </div>
+        <!-- Right: Job Title & Description (Shifted to Right) -->
+        <div class="w-full md:w-3/5 ml-12"> 
+            <h3 class="text-xl font-semibold text-purple-900">Data Science Intern 
+                <span class="text-gray-600 italic">(Aug 2024 - Present | Boston, MA)</span>
+            </h3>
+            <p class="text-gray-700 font-semibold">Amazon Robotics</p>
+            <ul class="list-disc list-inside mt-2 space-y-2 text-gray-800">
+                <li>Developed an NLP model for ticket classification using Transformer-based embeddings.</li>
+                <li>Implemented and deployed a ticket similarity search system using OpenSearch and LLM embeddings.</li>
+                <li>Built an AWS Lambda function for scalable inference with API Gateway integration.</li>
+            </ul>
+        </div>
     </div>
+
+    <!-- Moonfrog Labs Experience -->
+    <div class="flex flex-col md:flex-row items-start mb-10" data-aos="fade-up" data-aos-delay="200">
+        <!-- Left: Company Logo -->
+        <div class="w-1/3 md:w-1/5 flex justify-center md:justify-start">
+            <img src="assets/Moonfrog.png" alt="Moonfrog Labs" class="w-50 h-50 rounded-lg shadow-md">
+        </div>
+        <!-- Right: Job Title & Description (Shifted to Right) -->
+        <div class="w-full md:w-3/5 ml-12"> 
+            <h3 class="text-xl font-semibold text-purple-900">Senior Data Scientist 
+                <span class="text-gray-600 italic">(Sep 2020 - Apr 2023 | Bangalore, India)</span>
+            </h3>
+            <p class="text-gray-700 font-semibold">Moonfrog Labs</p>
+            <ul class="list-disc list-inside mt-2 space-y-2 text-gray-800">
+                <li>Developed a ML-based fraud detection algorithm, increasing fraud detection by 133%.</li>
+                <li>Designed and deployed personalized player engagement strategies, leading to a 12% revenue boost.</li>
+                <li>Developed a revamped allocation method, enhancing fairness in gamespace, yielding a 25% boost in competition equity.</li>
+                <li>Built and optimized ETL pipelines, transforming user analytics for strategic decision-making.</li>
+                <li>Built 20+ real-time visualization dashboards track key metrics across different business functions, including user engagement funnels, revenue and monetization analytics, and ad performance tracking.</li>
+                <li> Conducted and led in-depth data analysis for product launches, marketing campaigns, and user segmentation.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
     <!-- 🔹 Publications Section -->
     <div class="container mx-auto p-10 section-container" id="publications" data-aos="fade-up">
         <h2 class="text-3xl font-semibold text-center">📜 Publications</h2>
