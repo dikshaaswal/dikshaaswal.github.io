@@ -13,6 +13,8 @@
 
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 
     <style>
         /* Background Styling */
@@ -84,11 +86,10 @@
         <h2 class="text-3xl font-semibold">About Me</h2>
         <p class="mt-4 max-w-3xl mx-auto text-lg">
             I am an experienced Data Scientist with a strong foundation in machine learning, deep learning, and data analytics. 
-            With a Master’s degree in Computer Science from SUNY Binghamton (graduating in April 2025) and an M.Tech in 
-            Machine Learning from IIIT Allahabad, I have cultivated a passion for solving complex problems through innovative 
-            data-driven solutions. I thrive at the intersection of data science and real-world applications, using cutting-edge methods to uncover insights and create impactful solutions.
+            With a Master’s degree in Computer Science from SUNY Binghamton (graduating in May 2025) and an M.Tech in 
+            Machine Learning from IIIT Allahabad, 
         </p>
-        <p class="mt-4 max-w-3xl mx-auto text-lg"> Let’s connect if you share interests in data science, machine learning, or the transformative potential of AI!
+        <p class="mt-4 max-w-3xl mx-auto text-lg"> I am currently seeking full-time opportunities as a Data Scientist, Machine Learning Engineer, Data Engineer, or Business Intelligence Engineer. I am passionate about leveraging data-driven solutions to solve real-world challenges, and I am excited to apply my skills across a range of roles that blend analytics, engineering, and innovation.
         </p>
     </div>
 
@@ -156,14 +157,46 @@
 
 
 
+<!-- 🔹 Projects Section -->
+<div class="container mx-auto p-20 section-container" id="projects" data-aos="fade-up">
+  <h2 class="text-3xl font-semibold text-center mb-8">📊 Projects</h2>
 
-
-    <!-- 🔹 Projects Section -->
-    <div class="container mx-auto p-10 section-container" id="projects" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-center">Projects</h2>
-        <p class="mt-4 text-center">🔹 <b>Mitigation Tagging</b> - NLP model for ticket classification (Amazon Robotics)</p>
-        <p class="mt-2 text-center">🔹 <b>Fraud Detection</b> - ML-based fraud detection algorithm (Moonfrog Labs)</p>
+  <div class="grid md:grid-cols-2 gap-8">
+    
+    <!-- 🔹 Project 1 -->
+    <div class="relative group bg-white bg-opacity-50 p-10 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="0">
+      <a href="https://github.com/dikshaaswal/income_food_choices/tree/main" target="_blank" class="block">
+        <!-- Chart thumbnail -->
+        <img src="assets/Project1.png" alt="Project 1" class="rounded-lg w-full transition-opacity duration-300 group-hover:opacity-30">
+        
+        <!-- Overlay with icon -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-4xl text-purple-900 bg-white bg-opacity-80 p-4 rounded-full shadow-lg">
+            🔗 
+          </div>
+        </div>
+        
+        <h3 class="text-xl font-semibold text-purple-900 text-center mt-4">How Does Income Influence Food Choices?</h3>
+      </a>
     </div>
+
+    <!-- 🔹 Project 2 -->
+    <div class="relative group bg-white bg-opacity-50 p-10 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+      <a href="https://github.com/dikshaaswal/Smart_Water_Consumption" target="_blank" class="block">
+        <img src="assets/Project2.png" alt="Project 2" class="rounded-lg w-full transition-opacity duration-300 group-hover:opacity-30">
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="text-4xl text-purple-900 bg-white bg-opacity-80 p-4 rounded-full shadow-lg">
+            🔗
+          </div>
+        </div>
+        <h3 class="text-xl font-semibold text-purple-900 text-center mt-4">Smart Water Consumption Prediction</h3>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
 
 
 
@@ -220,24 +253,40 @@
 
 
 
-    <!-- 🔹 Publications Section -->
-    <div class="container mx-auto p-10 section-container" id="publications" data-aos="fade-up">
-        <h2 class="text-3xl font-semibold text-center">📜 Publications</h2>
-        <p class="mt-4 text-center">
-            <a href="https://doi.org/10.1007/s00138-021-01206-5" class="text-blue-700">🔹 Absolute IoU for Bounding Box Regression (Springer)</a>
-        </p>
-    </div>
+<!-- 🔹 Publications Section -->
+<div class="container mx-auto p-10 section-container" id="publications">
+  <h2 class="text-3xl font-semibold text-center mb-8">📜 Publications</h2>
+
+  <!-- Publication Card -->
+  <div id="publication-card" class="bg-white bg-opacity-50 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-200 hover:shadow-2xl max-w-4xl mx-auto cursor-pointer">
+    <h3 class="text-xl font-semibold text-purple-900 mb-2">🔹 Absolute IoU for Bounding Box Regression</h3>
+    <p class="text-gray-700 italic mb-2">Published in: <strong>Springer - Machine Vision and Applications</strong></p>
+    <p class="text-gray-800 mb-4">
+      Proposed a novel evaluation metric for bounding box regression models that improves robustness in object detection systems. Extensive experiments demonstrate improved alignment with human-annotated labels.
+    </p>
+    <a href="https://doi.org/10.1007/s00138-021-01206-5" target="_blank" class="text-blue-700 font-semibold underline">Read Full Paper →</a>
+  </div>
+</div>
+
+
+
+
+
     <!-- 🔹 Contact Section -->
     <div class="container mx-auto p-10 text-center" id="contact" data-aos="fade-up">
         <h2 class="text-3xl font-semibold">📬 Contact</h2>
         <p class="mt-2">📧 Email: diksha.aswal94@gmail.com</p>
     </div>
 
+
+
       <!-- Scripts for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // Initialize AOS animations
         AOS.init();
+            // Register ScrollTrigger for GSAP
+    gsap.registerPlugin(ScrollTrigger);
 
         // Hero Section Animation
         gsap.from("#profile-photo", { 
@@ -253,6 +302,8 @@
             duration: 1, 
             ease: "power2.out" 
         });
+
+
 
         // Smooth Scroll for Navigation
         document.querySelectorAll('nav a').forEach(anchor => {
@@ -283,6 +334,24 @@
                 window.scrollTo({ top: 0, behavior: "instant" });
             }, 50);
         };
+
+
+
+         // Animate publication card from bottom
+        gsap.from("#publication-card", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: "#publication-card",
+                start: "top 90%",
+            }
+        });
+
+
+
+
     </script>
 
 </body>
