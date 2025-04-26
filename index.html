@@ -8,6 +8,15 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Portfolio of Diksha Aswal - Data Scientist specializing in Machine Learning, NLP, Data Engineering.">
+    <meta name="keywords" content="Data Scientist, Machine Learning, NLP, Data Engineer, Diksha Aswal">
+    <meta name="author" content="Diksha Aswal">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+
     <!-- AOS (Animate On Scroll) for section animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
@@ -15,8 +24,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-
     <style>
+
+
+
         /* Background Styling */
         body {
             background: url('assets/Background_Image.jpg') no-repeat center center fixed;
@@ -24,6 +35,7 @@
             color: #2D1B69;
             position: relative;
         }
+
 
         /* Background Overlay */
         body::before {
@@ -46,37 +58,134 @@
             margin-bottom: 2rem; /* Adds spacing between sections */
         }
     </style>
+
 </head>
+
+
+
+
+
+
 <body>
 
+<div id="particles-js" class="fixed inset-0 -z-10"></div>
     <!-- 🔹 Navigation Bar -->
-    <nav id="navbar" class="bg-white bg-opacity-80 shadow-md fixed w-full top-0 z-10 opacity-0">
+   <!--  <nav id="navbar" class="bg-white bg-opacity-80 shadow-md fixed w-full top-0 z-10 opacity-0">
         <div class="container mx-auto flex justify-center p-4">
             <ul class="flex space-x-6">
-                <li><a href="#about" class="text-purple-800 hover:text-purple-600">About</a></li>
-                <li><a href="#skills" class="text-purple-800 hover:text-purple-600">Skills</a></li>
-                <li><a href="#projects" class="text-purple-800 hover:text-purple-600">Projects</a></li>
-                <li><a href="#experience" class="text-purple-800 hover:text-purple-600">Experience</a></li>
-                <li><a href="#publications" class="text-purple-800 hover:text-purple-600">Publications</a></li>
-                <li><a href="#contact" class="text-purple-800 hover:text-purple-600">Contact</a></li>
+                <li><a href="#about" class="text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-300">About</a></li>
+                <li><a href="#skills" class="text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-300">Skills</a></li>
+                <li><a href="#projects" class="text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-300">Projects</a></li>
+                <li><a href="#experience" class="text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-300">Experience</a></li>
+                <li><a href="#publications" class="text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-300">Publications</a></li>
+                <li><a href="#contact" class="text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-1200">Contact</a></li>
             </ul>
+
+
+
         </div>
     </nav>
 
+ -->
+<!-- Fancy and Animated Navigation Bar -->
+<nav id="navbar" class="fixed top-0 w-full z-50 bg-white bg-opacity-80 backdrop-blur-md shadow-md transition-all duration-500">
+  <div class="container mx-auto flex justify-center p-4">
+    <ul class="flex space-x-8">
+      <li><a href="#about" class="relative text-purple-800 hover:text-purple-600 group transform hover:scale-110 transition duration-300">About
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-800 transition-all group-hover:w-full"></span>
+      </a></li>
+      <li><a href="#skills" class="relative text-purple-800 hover:text-purple-600 group transform hover:scale-110 transition duration-300">Skills
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-800 transition-all group-hover:w-full"></span>
+      </a></li>
+      <li><a href="#projects" class="relative text-purple-800 hover:text-purple-600 group transform hover:scale-110 transition duration-300">Projects
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-800 transition-all group-hover:w-full"></span>
+      </a></li>
+      <li><a href="#experience" class="relative text-purple-800 hover:text-purple-600 group transform hover:scale-110 transition duration-300">Experience
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-800 transition-all group-hover:w-full"></span>
+      </a></li>
+      <li><a href="#publications" class="relative text-purple-800 hover:text-purple-600 group transform hover:scale-110 transition duration-300">Publications
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-800 transition-all group-hover:w-full"></span>
+      </a></li>
+      <li><a href="#contact" class="relative text-purple-800 hover:text-purple-600 group transform hover:scale-110 transition duration-300">Contact
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-purple-800 transition-all group-hover:w-full"></span>
+      </a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Scroll-based Navbar Background Change
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('bg-white', 'bg-opacity-90', 'shadow-lg');
+    } else {
+      navbar.classList.remove('bg-white', 'bg-opacity-90', 'shadow-lg');
+    }
+  });
+
+  // Animate Navbar Entry
+  gsap.from("#navbar", { 
+      y: -50,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out"
+  });
+</script>
+
+
+
+
+
+
     <!-- 🔹 Hero Section -->
-    <div class="container mx-auto p-10 mt-20 flex flex-col md:flex-row items-center">
+    <div class="container mx-auto p-10 mt-20 flex flex-col md:flex-row items-center ">
         <!-- Profile Photo -->
         <div id="profile-photo" class="w-full md:w-1/3 flex justify-center md:justify-start">
             <img src="assets/Profile.jpg" alt="Diksha Aswal" class="rounded-full w-65 h-65 shadow-lg">
         </div>
 
+
+
+
+
         <!-- Profile Info -->
         <div id="profile-info" class="w-full md:w-2/3 text-left pl-10">
             <h1 class="text-5xl font-bold">👩‍💻 Diksha Aswal</h1>
             <p class="text-xl mt-2">Data Scientist | Machine Learning | NLP</p>
-            <div class="mt-4">
+
+
+
+
+            <!-- <div class="mt-4">
                 <a href="https://www.linkedin.com/in/diksha-aswal-04aa82a2/" class="text-blue-700 mx-2">LinkedIn</a>
                 <a href="https://github.com/dikshaaswal" class="text-blue-700 mx-2">GitHub</a>
+ -->
+  <!-- Social Icons and Resume Button -->
+    <div class="mt-6 flex flex-wrap gap-6 items-center">
+
+      <!-- LinkedIn Icon -->
+      <a href="https://www.linkedin.com/in/diksha-aswal-04aa82a2/" target="_blank" rel="noopener noreferrer" 
+         class="backdrop-blur-md bg-white/30 p-3 rounded-full shadow-md text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.3h-3v-5.5c0-3.5-4-3.23-4 0v5.5h-3v-10h3v1.37c1.4-2.58 7-2.77 7 2.47v6.16z"/>
+        </svg>
+      </a>
+
+      <!-- GitHub Icon -->
+      <a href="https://github.com/dikshaaswal" target="_blank" rel="noopener noreferrer" 
+         class="backdrop-blur-md bg-white/30 p-3 rounded-full shadow-md text-purple-800 hover:text-purple-600 transform hover:scale-110 transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+          <path d="M12 .5C5.73.5.5 5.74.5 12c0 5.09 3.29 9.39 7.86 10.92.58.1.79-.25.79-.56 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.37-3.88-1.37-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.72-1.56-2.55-.3-5.23-1.28-5.23-5.72 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.45-2.68 5.41-5.24 5.7.41.35.77 1.04.77 2.09 0 1.51-.01 2.73-.01 3.1 0 .31.21.67.8.56C20.71 21.39 24 17.09 24 12c0-6.26-5.23-11.5-12-11.5z"/>
+        </svg>
+      </a>
+
+                  <!-- Resume Button -->
+        <a href="assets/Resume_Diksha_Aswal.pdf" target="_blank" rel="noopener noreferrer"
+           class="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-4 py-2 rounded-lg shadow transition duration-300">
+        Resume
+        </a>
             </div>
         </div>
     </div>
@@ -86,7 +195,7 @@
         <h2 class="text-3xl font-semibold">About Me</h2>
         <p class="mt-4 max-w-3xl mx-auto text-lg">
             I am an experienced Computer Scientist with a strong foundation in machine learning, deep learning, and data science. 
-            With a Master of Science degree in Computer Science from SUNY Binghamton (graduating in May 2025) and an Master of Technology degree in Machine Learning and Infromtation Systems from IIIT Allahabad. 
+            With a Master of Science degree in Computer Science from SUNY Binghamton (graduating in May 2025) and an Master of Technology degree in Machine Learning and Information Systems from IIIT Allahabad. 
         </p>
         <p class="mt-4 max-w-3xl mx-auto text-lg"> I am currently seeking full-time opportunities as a Data Scientist, Machine Learning Engineer, Software Development Engineer, Data Engineer, or Business Intelligence Engineer. I am passionate about leveraging data-driven solutions to solve real-world challenges, and I am excited to apply my skills across a range of roles that blend analytics, engineering, and innovation.
         </p>
@@ -167,7 +276,7 @@
     <h2 class="text-3xl font-semibold text-center mb-8">💼 Work Experience</h2>
 
     <!-- Amazon Experience -->
-    <div class="flex flex-col md:flex-row items-start mb-10" data-aos="fade-up">
+    <div class="flex flex-col md:flex-row items-start mb-20" data-aos="fade-up">
         <!-- Left: Company Logo -->
         <div class="w-1/3 md:w-1/5 flex justify-center md:justify-start">
             <img src="assets/Amazon.png" alt="Amazon" class="w-50 h-50 rounded-lg shadow-md">
@@ -181,33 +290,64 @@
             <ul class="list-disc list-inside mt-2 space-y-2 text-gray-800">
                 <li>Developed an NLP model for ticket classification using Transformer-based embeddings.</li>
                 <li>Implemented and deployed a ticket similarity search system using OpenSearch and LLM embeddings.</li>
-                <li>Built an AWS Lambda function for scalable inference with API Gateway integration.</li>
+                <li>Built AWS CDK pipeline for scalable inference with API Gateway integration.</li>
             </ul>
         </div>
     </div>
 
     <!-- Moonfrog Labs Experience -->
-    <div class="flex flex-col md:flex-row items-start mb-10" data-aos="fade-up" data-aos-delay="400">
-        <!-- Left: Company Logo -->
-        <div class="w-1/3 md:w-1/5 flex justify-center md:justify-start">
-            <img src="assets/Moonfrog.png" alt="Moonfrog Labs" class="w-50 h-50 rounded-lg shadow-md">
-        </div>
-        <!-- Right: Job Title & Description (Shifted to Right) -->
-        <div class="w-full md:w-3/5 ml-12"> 
-            <h3 class="text-xl font-semibold text-purple-900">Senior Data Scientist 
-                <span class="text-gray-600 italic">(Sep 2020 - Apr 2023 | Bangalore, India)</span>
-            </h3>
-            <p class="text-gray-700 font-semibold">Moonfrog Labs</p>
-            <ul class="list-disc list-inside mt-2 space-y-2 text-gray-800">
-                <li>Developed a ML-based fraud detection algorithm, increasing fraud detection by 133%.</li>
-                <li>Designed and deployed personalized player engagement strategies, leading to a 12% revenue boost.</li>
-                <li>Developed a revamped allocation method, enhancing fairness in gamespace, yielding a 25% boost in competition equity.</li>
-                <li>Built and optimized ETL pipelines, transforming user analytics for strategic decision-making.</li>
-                <li>Built 20+ real-time visualization dashboards track key metrics across different business functions, including user engagement funnels, revenue and monetization analytics, and ad performance tracking.</li>
-                <li> Conducted and led in-depth data analysis for product launches, marketing campaigns, and user segmentation.</li>
-            </ul>
-        </div>
+<div class="flex flex-col md:flex-row items-start mb-20" data-aos="fade-up" data-aos-delay="400">
+
+  <!-- Left Side: Company Logo -->
+  <div class="w-full md:w-1/5 flex justify-center md:justify-start mb-6 md:mb-0">
+    <img src="assets/Moonfrog.png" alt="Moonfrog Labs" class="w-50 h-50 rounded-lg shadow-md">
+  </div>
+
+  <!-- Right Side: Experience Details -->
+  <div class="w-full md:w-4/5 flex flex-col gap-10 ml-0 md:ml-12">
+
+    <!-- Senior Data Scientist -->
+    <div>
+      <h3 class="text-xl font-semibold text-purple-900">Senior Data Scientist 
+        <span class="text-gray-600 italic">(March 2022 - Apr 2023 | Bangalore, India)</span>
+      </h3>
+      <p class="text-gray-700 font-semibold">Moonfrog Labs</p>
+      <ul class="list-disc list-inside mt-2 space-y-2 text-gray-800">
+        <li>Developed an ML-based fraud detection algorithm, increasing fraud detection by 133%.</li>
+        <li>Designed personalized player engagement strategies, leading to a 12% revenue boost.</li>
+        <li>Enhanced fairness in gamespace, boosting competition equity by 25%.</li>
+      </ul>
     </div>
+
+    <!-- Data Scientist -->
+    <div>
+      <h3 class="text-xl font-semibold text-purple-900">Data Scientist 
+        <span class="text-gray-600 italic">(April 2021 - March 2022 | Bangalore, India)</span>
+      </h3>
+      <p class="text-gray-700 font-semibold">Moonfrog Labs</p>
+      <ul class="list-disc list-inside mt-2 space-y-2 text-gray-800">
+        <li>Built and optimized ETL pipelines for user analytics transformation.</li>
+        <li>Created 20+ real-time dashboards tracking KPIs across business functions.</li>
+        <li>Reduced false positives by 64% in ML-based fraud detection systems.</li>
+      </ul>
+    </div>
+
+    <!-- Associate Data Analyst -->
+    <div>
+      <h3 class="text-xl font-semibold text-purple-900">Associate Data Analyst 
+        <span class="text-gray-600 italic">(Sept 2020 - March 2021 | Bangalore, India)</span>
+      </h3>
+      <p class="text-gray-700 font-semibold">Moonfrog Labs</p>
+      <ul class="list-disc list-inside mt-2 space-y-2 text-gray-800">
+        <li>Performed A/B testing on gaming features, improving conversion by 10%.</li>
+        <li>Led detailed data analysis for product launches and segmentation studies.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
 
 </div>
 
@@ -324,9 +464,22 @@
 </div>
 
 
+<!-- 🔹 Footer Section -->
+<footer class="bg-white bg-opacity-70 backdrop-blur-md text-purple-900 text-center py-6 mt-10">
+  <div class="container mx-auto flex flex-col gap-4 items-center">
+     <!-- Thank You Note -->
+    <p class="text-sm text-purple-800 mt-2">Thank you for visiting my portfolio!</p>
 
+    <!-- Copyright -->
+    <p class="text-xs text-gray-600">&copy; 2025 Diksha Aswal. All rights reserved.</p>
 
+  </div>
+</footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" class="hidden fixed bottom-8 right-8 bg-purple-700 hover:bg-purple-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-300 z-50">
+  ↑
+</button>
 
       <!-- Scripts for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -363,6 +516,22 @@
                 });
             });
         });
+            // Scroll Restoration
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.onload = () => setTimeout(() => window.scrollTo({ top: 0, behavior: "instant" }), 50);
+
+    // Back to Top Button Logic
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.remove("hidden");
+        } else {
+            backToTopButton.classList.add("hidden");
+        }
+    });
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
         // Navigation Bar Fade-In Animation
         gsap.to("#navbar", { 
@@ -401,6 +570,67 @@
 
 
     </script>
+
+
+
+<!-- Particles.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- Initialize Particles -->
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 50,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#6B21A8"  // Light lavender color to match your theme
+    },
+    "shape": {
+      "type": "circle",
+    },
+    "opacity": {
+      "value": 0.8,
+    },
+    "size": {
+      "value": 10,
+      "random": true
+    },
+     "line_linked": {         // 🔥 Connecting Lines
+      "enable": true,
+      "distance": 150,
+      "color": "#6B21A8",
+      "opacity": 0.5,
+      "width": 2
+    }
+    ,
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "straight": false
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
 
 </body>
 </html>
